@@ -14,6 +14,8 @@ class Portlet extends \yii\bootstrap\Widget
     public $title;
 
     public $subTitle;
+    
+    public $href;
 
     public $icon;
 
@@ -51,6 +53,9 @@ class Portlet extends \yii\bootstrap\Widget
 
             echo Html::beginTag('div', ['class' => 'caption']);
 
+            if ($this->href)
+                echo "<a href='".$this->href."'>";
+
             if ($this->icon)
             {
                 echo Html::tag('i', '', ['class' => $this->icon]);
@@ -62,6 +67,9 @@ class Portlet extends \yii\bootstrap\Widget
             {
                 echo Html::tag('span', $this->subTitle, ['class' => 'caption-helper']);
             }
+
+            if ($this->href)
+                echo "</a>";
 
             echo Html::endTag('div');
 

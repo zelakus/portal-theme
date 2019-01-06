@@ -24,7 +24,8 @@ class CustomAsset extends AssetBundle {
      */
     public $css = [
         'css/site.css',
-        'css/custom.css'
+        'css/custom.css',
+        'css/zela.css'
 
     ];
 
